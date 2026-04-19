@@ -1,12 +1,5 @@
 # Fuse
 
-> A compiled systems programming language focused on memory safety,
-> concurrency safety, and developer experience as a first-class constraint.
-
-This file is the staged root `README.md` for Fuse. It is the short entry point
-for new readers of the repository and points to the core governance,
-specification, and delivery documents.
-
 Fuse is a statically typed systems language designed for programs that need
 predictable behavior, explicit control, and readable semantics. It provides
 memory safety without a garbage collector, concurrency safety without a borrow
