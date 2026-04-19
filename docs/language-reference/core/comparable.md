@@ -2,7 +2,7 @@
 
 > Public module: `core.comparable`
 >
-> Status: Stage 1 baseline draft.
+> Status: SPECIFIED — W20.
 
 `core.comparable` documents ordering-oriented traits and helpers such as total
 ordering contracts, `compare`, and sorting compatibility.

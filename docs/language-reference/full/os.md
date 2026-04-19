@@ -2,7 +2,7 @@
 
 > Public module: `full.os`
 >
-> Status: Stage 1 baseline draft.
+> Status: SPECIFIED — W22.
 
 `full.os` covers operating-system identity, platform-level handles, and process
 termination/status conventions.

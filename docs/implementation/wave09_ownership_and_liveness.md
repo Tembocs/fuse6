@@ -133,5 +133,5 @@ go test ./tests/e2e/... -run TestBorrowRejections -v
 - Task 01: Retire liveness and drop stubs [W09-PCL-T01-RETIRE]
   Verify: `go run tools/checkstubs/main.go -wave W09`
 - Task 02: WC009 entry [W09-PCL-T02-CLOSURE-LOG]
-  Verify: `grep "WC009" docs/learning-log.md`
+  Verify: `go run tools/checkgov/main.go -wc-entry WC009`
 

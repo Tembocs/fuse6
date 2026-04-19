@@ -2,7 +2,7 @@
 
 > Public module: `full.random`
 >
-> Status: Stage 1 baseline draft.
+> Status: SPECIFIED — W22.
 
 `full.random` defines deterministic pseudo-random generation, system entropy,
 and typed random helpers.

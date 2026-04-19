@@ -2,7 +2,7 @@
 
 > Public module: `full.sys`
 >
-> Status: Stage 1 baseline draft.
+> Status: SPECIFIED — W22.
 
 `full.sys` covers low-level platform queries that belong in the safe public
 surface but sit below `full.os`.

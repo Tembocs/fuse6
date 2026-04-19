@@ -2,7 +2,7 @@
 
 > Public module: `full.http`
 >
-> Status: Stage 1 baseline draft.
+> Status: SPECIFIED — W22.
 
 `full.http` defines requests, responses, headers, status codes, and the Stage 1
 blocking client surface.

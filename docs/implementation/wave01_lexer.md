@@ -66,5 +66,5 @@ go test ./compiler/lex/... -run TestGolden -count=3 -v
 - Task 01: Retire lexer stub [W01-PCL-T01-RETIRE-STUB]
   Verify: `go run tools/checkstubs/main.go -wave W01 -retired lexer`
 - Task 02: WC001 entry [W01-PCL-T02-CLOSURE-LOG]
-  Verify: `grep "WC001" docs/learning-log.md`
+  Verify: `go run tools/checkgov/main.go -wc-entry WC001`
 

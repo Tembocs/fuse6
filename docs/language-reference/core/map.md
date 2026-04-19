@@ -2,7 +2,7 @@
 
 > Public module: `core.map`
 >
-> Status: Stage 1 baseline draft.
+> Status: SPECIFIED — W20.
 
 `core.map` defines the standard associative key/value container for Fuse.
 

@@ -2,7 +2,7 @@
 
 > Public module: `full.shared`
 >
-> Status: Stage 1 baseline draft.
+> Status: SPECIFIED — W22.
 
 `full.shared` defines the focused shared-state surface around `Shared[T]` and
 its ergonomics.

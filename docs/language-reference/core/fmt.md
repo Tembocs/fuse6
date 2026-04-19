@@ -2,7 +2,7 @@
 
 > Public module: `core.fmt`
 >
-> Status: Stage 1 baseline draft.
+> Status: SPECIFIED — W20.
 
 `core.fmt` owns formatter types, formatting traits, and the format-string
 surface for `format!`, `print!`, and `eprint!`.

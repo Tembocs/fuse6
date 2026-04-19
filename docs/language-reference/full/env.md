@@ -2,7 +2,7 @@
 
 > Public module: `full.env`
 >
-> Status: Stage 1 baseline draft.
+> Status: SPECIFIED — W22.
 
 `full.env` defines environment-variable and process-environment helpers.
 

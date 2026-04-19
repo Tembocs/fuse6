@@ -2,7 +2,7 @@
 
 > Public module: `core.int`
 >
-> Status: Stage 1 baseline draft.
+> Status: SPECIFIED — W20.
 
 `core.int` documents the default signed-integer helper surface for the platform
 native signed size.

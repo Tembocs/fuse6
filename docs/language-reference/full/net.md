@@ -2,7 +2,7 @@
 
 > Public module: `full.net`
 >
-> Status: Stage 1 baseline draft.
+> Status: SPECIFIED — W22.
 
 `full.net` defines socket addresses, streams, listeners, and baseline name
 resolution.

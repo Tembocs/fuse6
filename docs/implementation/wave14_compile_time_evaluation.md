@@ -86,5 +86,5 @@ go test ./tests/e2e/... -run TestConstFnProof -v
 - Task 01: Retire `const fn` stubs [W14-PCL-T01-RETIRE]
   Verify: `go run tools/checkstubs/main.go -wave W14`
 - Task 02: WC014 entry [W14-PCL-T02-CLOSURE-LOG]
-  Verify: `grep "WC014" docs/learning-log.md`
+  Verify: `go run tools/checkgov/main.go -wc-entry WC014`
 

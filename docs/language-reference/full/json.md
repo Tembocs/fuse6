@@ -2,7 +2,7 @@
 
 > Public module: `full.json`
 >
-> Status: Stage 1 baseline draft.
+> Status: SPECIFIED — W22.
 
 `full.json` defines the JSON value model, parse/stringify helpers, and
 Result-based error handling for invalid input.

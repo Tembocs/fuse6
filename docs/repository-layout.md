@@ -30,6 +30,9 @@ The future repository is organized as follows.
 
 ```text
 fuse6/
+├── .claude/
+│   └── current-wave.json
+├── .ci/
 ├── cmd/
 │   └── fuse/
 ├── compiler/
@@ -82,7 +85,6 @@ fuse6/
 │   ├── rules.md
 │   ├── learning-log.md
 │   └── registry-protocol.md
-├── .ci/
 ├── STUBS.md
 ├── go.mod
 ├── go.sum
@@ -112,6 +114,12 @@ codegenned, or otherwise operational. Every stub must have an entry in the
 Active stubs table; every entry must correspond to a real stub in the code.
 
 `STUBS.md` has two sections. Both are required.
+
+Before the compiler, runtime, and tool trees exist, `STUBS.md` may begin in an
+explicit pre-bootstrap seed state that says the Active stubs table is empty
+because no code-backed stubs exist yet. Wave 00 replaces that pre-bootstrap
+seed with the first code-backed inventory before any post-W00 implementation
+wave begins.
 
 ### Section 1 — Active stubs
 
@@ -184,6 +192,25 @@ closure and never retroactively modified.
 compiler is unimplemented, so the initial entries may cover all language
 features at a coarse granularity, to be refined as waves progress. The stub
 history starts empty and accumulates across waves.
+
+### `.claude/current-wave.json`
+
+`.claude/current-wave.json` is the coordination file for the active wave and
+phase. It is required once Wave 00 governance work begins and is updated at the
+P00 and PCL boundaries of every wave.
+
+The file uses this shape:
+
+```json
+{
+  "current_wave": "W00",
+  "current_phase": "P00",
+  "updated": "2026-04-19"
+}
+```
+
+`current_wave` and `current_phase` must reflect the committed wave state. The
+`updated` field records the last deliberate change to the coordination file.
 
 ### `go.mod`
 
@@ -546,13 +573,18 @@ Expected tools include:
 - `checkartifacts/`
 - `checkci/`
 - `checkdocs/`
+- `checkgoc/`
 - `checkgov/`
 - `checklayout/`
 - `checkref/`
 - `checkruntime/`
 - `checkstubs/` — verifies that every entry in `STUBS.md` corresponds to a
   real stub that emits the declared diagnostic; run in CI
+- `checktargets/`
+- `docsite/`
+- `docexamples/`
 - `goldens/`
+- `perfreport/`
 
 Tooling belongs here when it supports repository workflow, verification, or
 documentation, not when it is compiler logic in disguise.

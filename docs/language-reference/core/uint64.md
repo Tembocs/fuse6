@@ -2,7 +2,7 @@
 
 > Public module: `core.uint64`
 >
-> Status: Stage 1 baseline draft.
+> Status: SPECIFIED — W20.
 
 `core.uint64` covers `U64` parsing, formatting, limits, and helper APIs for
 large counters, identifiers, and sizes.

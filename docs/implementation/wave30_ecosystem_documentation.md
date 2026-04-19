@@ -68,7 +68,7 @@ go test ./tools/docexamples/... -run TestTutorialExamplesCompile -v
   DoD: `docs/book/outline.md` lists every chapter, its audience, and
   what it teaches. Chapters are sequenced by prerequisite, not by
   language-reference section number.
-  Verify: `test -f docs/book/outline.md && go run tools/checkdocs/main.go -book-structure`
+  Verify: `go run tools/checkdocs/main.go -book-structure`
 - Task 02: Chapter drafts [W30-P02-T02-CHAPTERS]
   DoD: every outlined chapter has a draft under `docs/book/`. Examples
   in drafts compile.
@@ -84,24 +84,24 @@ go test ./tools/docexamples/... -run TestTutorialExamplesCompile -v
   DoD: `docs/migration/from-rust.md` covers ownership differences (no
   lifetimes, no-borrow-in-field), trait-object syntax, concurrency
   model, package-manager mapping, and the common pitfalls.
-  Verify: `test -f docs/migration/from-rust.md && go run tools/checkdocs/main.go -migration-rust`
+  Verify: `go run tools/checkdocs/main.go -migration-rust`
 - Task 02: From Go [W30-P03-T02-FROM-GO]
   DoD: `docs/migration/from-go.md` covers ownership vs GC, errors via
   `Result[T, E]` and `?` vs multi-return, generics, interfaces vs
   traits, and goroutines vs `spawn` + channels.
-  Verify: `test -f docs/migration/from-go.md && go run tools/checkdocs/main.go -migration-go`
+  Verify: `go run tools/checkdocs/main.go -migration-go`
 - Task 03: From C [W30-P03-T03-FROM-C]
   DoD: `docs/migration/from-c.md` covers `unsafe`, `Ptr[T]`, FFI,
   ownership instead of manual free, and the escape hatch for systems
   code that genuinely needs it.
-  Verify: `test -f docs/migration/from-c.md && go run tools/checkdocs/main.go -migration-c`
+  Verify: `go run tools/checkdocs/main.go -migration-c`
 
 ## Phase 04: Ecosystem Guide [W30-P04-ECOSYSTEM]
 
 - Task 01: Project structure and conventions [W30-P04-T01-STRUCTURE]
   DoD: `docs/ecosystem-guide.md` documents project layout, versioning,
   testing conventions, documentation conventions, and CI recipes.
-  Verify: `test -f docs/ecosystem-guide.md`
+  Verify: `go run tools/checkdocs/main.go -ecosystem-guide`
 - Task 02: Publishing workflow [W30-P04-T02-PUBLISHING]
   DoD: the guide explains how to publish a package using the W23
   registry protocol, including the authentication and integrity model.
@@ -117,11 +117,11 @@ go test ./tools/docexamples/... -run TestTutorialExamplesCompile -v
   DoD: a site generator (committed under `tools/docsite/`) builds the
   documentation from `docs/` into a navigable static site. The site
   builds in CI on every commit.
-  Verify: `go run tools/docsite/main.go -build && go run tools/docsite/main.go -verify`
+  Verify: `go run tools/docsite/main.go -build -verify`
 
 ## Wave Closure Phase [W30-PCL-WAVE-CLOSURE]
 
 - Task 01: Stub history closure [W30-PCL-T01-HISTORY]
   Verify: `go run tools/checkstubs/main.go -wave W30`
 - Task 02: WC030 entry [W30-PCL-T02-CLOSURE-LOG]
-  Verify: `grep "WC030" docs/learning-log.md`
+  Verify: `go run tools/checkgov/main.go -wc-entry WC030`

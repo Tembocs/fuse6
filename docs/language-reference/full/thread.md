@@ -2,7 +2,7 @@
 
 > Public module: `full.thread`
 >
-> Status: Stage 1 baseline draft.
+> Status: SPECIFIED — W22.
 
 `full.thread` owns thread creation, join handles, detach behavior, and thread
 result propagation.

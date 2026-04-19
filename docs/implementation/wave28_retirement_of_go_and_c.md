@@ -38,12 +38,12 @@ stage2_out/fusec2_final --version
 - Task 01: Replace C runtime dependencies [W28-P02-T01-REPLACE-C]
   Verify: `go run tools/checkgoc/main.go -active-path-no-c`
 - Task 02: Remove C from bootstrap assumptions [W28-P02-T02-C-FREE]
-  Verify: `fuse build --backend=native tests/e2e/hello_exit.fuse -o /tmp/he && /tmp/he`
+  Verify: `go run tools/checkgoc/main.go -native-proof-program`
 
 ## Wave Closure Phase [W28-PCL-WAVE-CLOSURE]
 
 - Task 01: Stub history closure [W28-PCL-T01-HISTORY]
   Verify: `go run tools/checkstubs/main.go -wave W28`
 - Task 02: WC028 entry [W28-PCL-T02-CLOSURE-LOG]
-  Verify: `grep "WC028" docs/learning-log.md`
+  Verify: `go run tools/checkgov/main.go -wc-entry WC028`
 

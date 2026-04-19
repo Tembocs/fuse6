@@ -124,5 +124,5 @@ their retiring wave remains concrete.
   DoD: WC024 records which stubs remained until this late (and why), what
   the clearance wave surfaced, and which W25+ rows legitimately remained
   active after the gate.
-  Verify: `grep "WC024" docs/learning-log.md`
+  Verify: `go run tools/checkgov/main.go -wc-entry WC024`
 

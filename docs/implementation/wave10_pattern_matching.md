@@ -67,5 +67,5 @@ go test ./tests/e2e/... -run TestMatchEnumDispatch -v
 - Task 01: Retire pattern matching stubs [W10-PCL-T01-RETIRE]
   Verify: `go run tools/checkstubs/main.go -wave W10`
 - Task 02: WC010 entry [W10-PCL-T02-CLOSURE-LOG]
-  Verify: `grep "WC010" docs/learning-log.md`
+  Verify: `go run tools/checkgov/main.go -wc-entry WC010`
 

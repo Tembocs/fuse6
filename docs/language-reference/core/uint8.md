@@ -2,7 +2,7 @@
 
 > Public module: `core.uint8`
 >
-> Status: Stage 1 baseline draft.
+> Status: SPECIFIED — W20.
 
 `core.uint8` covers byte-sized unsigned integer parsing, formatting, limits,
 and byte-oriented helper functions.

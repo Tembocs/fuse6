@@ -2,7 +2,7 @@
 
 > Public module: `core.math`
 >
-> Status: Stage 1 baseline draft.
+> Status: SPECIFIED — W20.
 
 `core.math` collects common numeric helpers that are not tied to a single width
 module, such as `clamp`, powers, roots, and trigonometric helpers where v1

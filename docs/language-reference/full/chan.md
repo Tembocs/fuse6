@@ -2,7 +2,7 @@
 
 > Public module: `full.chan`
 >
-> Status: Stage 1 baseline draft.
+> Status: SPECIFIED — W22.
 
 `full.chan` defines channels, sending, receiving, closing, and any blocking or
 try-style message-passing operations.

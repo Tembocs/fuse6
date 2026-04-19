@@ -2,7 +2,7 @@
 
 > Public module: `full.timer`
 >
-> Status: Stage 1 baseline draft.
+> Status: SPECIFIED — W22.
 
 `full.timer` defines one-shot and repeating timer helpers built on top of the
 lower-level time primitives.

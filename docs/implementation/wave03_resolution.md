@@ -79,5 +79,5 @@ go test ./compiler/resolve/... -run TestVisibilityEnforcement -v
 - Task 01: Retire resolve stubs [W03-PCL-T01-RETIRE]
   Verify: `go run tools/checkstubs/main.go -wave W03 -retired resolve,cfg,visibility`
 - Task 02: WC003 entry [W03-PCL-T02-CLOSURE-LOG]
-  Verify: `grep "WC003" docs/learning-log.md`
+  Verify: `go run tools/checkgov/main.go -wc-entry WC003`
 

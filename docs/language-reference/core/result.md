@@ -2,7 +2,7 @@
 
 > Public module: `core.result`
 >
-> Status: Stage 1 baseline draft.
+> Status: SPECIFIED — W20.
 
 `core.result` defines `Result[T, E]`, its constructors, combinators, and the
 expected error-carrying surface for library APIs.

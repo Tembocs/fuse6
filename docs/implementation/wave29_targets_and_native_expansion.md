@@ -171,4 +171,4 @@ fuse build stdlib/ext/...
 - Task 01: Stub history closure [W29-PCL-T01-HISTORY]
   Verify: `go run tools/checkstubs/main.go -wave W29`
 - Task 02: WC029 entry [W29-PCL-T02-CLOSURE-LOG]
-  Verify: `grep "WC029" docs/learning-log.md`
+  Verify: `go run tools/checkgov/main.go -wc-entry WC029`

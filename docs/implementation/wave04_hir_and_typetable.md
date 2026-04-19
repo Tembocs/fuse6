@@ -116,5 +116,5 @@ rewrite. Designing them in at the pass-manifest stage is cheap.
 - Task 01: Retire HIR/TypeTable/bridge stubs [W04-PCL-T01-RETIRE]
   Verify: `go run tools/checkstubs/main.go -wave W04 -retired hir,typetable,bridge`
 - Task 02: WC004 entry [W04-PCL-T02-CLOSURE-LOG]
-  Verify: `grep "WC004" docs/learning-log.md`
+  Verify: `go run tools/checkgov/main.go -wc-entry WC004`
 

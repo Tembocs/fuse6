@@ -2,7 +2,7 @@
 
 > Public module: `full.jsonrpc`
 >
-> Status: Stage 1 baseline draft.
+> Status: SPECIFIED — W22.
 
 `full.jsonrpc` defines transport-independent JSON-RPC envelopes and helpers on
 top of `full.json`.

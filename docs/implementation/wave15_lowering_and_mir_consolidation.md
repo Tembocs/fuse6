@@ -96,5 +96,5 @@ go test ./tests/property/... -run TestMirTransforms -v
 - Task 01: Retire lower/mir stubs [W15-PCL-T01-RETIRE]
   Verify: `go run tools/checkstubs/main.go -wave W15`
 - Task 02: WC015 entry [W15-PCL-T02-CLOSURE-LOG]
-  Verify: `grep "WC015" docs/learning-log.md`
+  Verify: `go run tools/checkgov/main.go -wc-entry WC015`
 

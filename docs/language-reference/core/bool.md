@@ -2,7 +2,7 @@
 
 > Public module: `core.bool`
 >
-> Status: Stage 1 baseline draft.
+> Status: SPECIFIED — W20.
 
 `core.bool` is the guide for the primitive `Bool` type, its textual forms, and
 its module-level helper surface.

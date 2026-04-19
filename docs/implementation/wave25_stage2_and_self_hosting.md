@@ -40,10 +40,10 @@ Proof of completion:
 fuse check stage2/src/compiler/lex/...
 fuse check stage2/src/compiler/check/...
 fuse check stage2/src/compiler/codegen/...
-fuse build stage2/src/... -o stage2_out/fusec2
-stage2_out/fusec2 check stage2/src/compiler/lex/...
-stage2_out/fusec2 build stage2/src/... -o stage2_out/fusec2_gen2
-make repro
+go run tools/checkartifacts/main.go -stage2-bootstrap-build
+go run tools/checkartifacts/main.go -stage2-smoke
+go run tools/checkartifacts/main.go -stage2-self-compile
+go run tools/checkartifacts/main.go -bootstrap-repro
 go test ./tests/bootstrap/... -v
 ```
 
@@ -154,7 +154,7 @@ go test ./tests/bootstrap/... -v
   Expected deliveries: stage2-generated `stage2_out/fusec2_gen2`.
   DoD: the stage1-built compiler can compile the same stage2 source tree into a
   second-generation compiler.
-  Verify: `stage2_out/fusec2 build stage2/src/... -o stage2_out/fusec2_gen2`
+  Verify: `go run tools/checkartifacts/main.go -stage2-self-compile`
 - Task 02: Run the bootstrap smoke surface on the second-generation compiler
   [W25-P06-T02-GEN2-SMOKE]
   Currently: a second-generation binary could still be linkable but unusable.
@@ -171,7 +171,7 @@ go test ./tests/bootstrap/... -v
   Expected deliveries: reproducibility proof for stage2 artifacts.
   DoD: the project-owned reproducibility check passes for the self-hosted
   compiler build.
-  Verify: `make repro`
+  Verify: `go run tools/checkartifacts/main.go -bootstrap-repro`
 - Task 02: Gate merges on bootstrap health [W25-P07-T02-GATE]
   Currently: local self-hosting success is insufficient unless CI keeps the
   bootstrap path healthy.
@@ -184,5 +184,5 @@ go test ./tests/bootstrap/... -v
 - Task 01: Stub history closure [W25-PCL-T01-HISTORY]
   Verify: `go run tools/checkstubs/main.go -wave W25`
 - Task 02: WC025 entry [W25-PCL-T02-CLOSURE-LOG]
-  Verify: `grep "WC025" docs/learning-log.md`
+  Verify: `go run tools/checkgov/main.go -wc-entry WC025`
 

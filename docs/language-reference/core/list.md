@@ -2,7 +2,7 @@
 
 > Public module: `core.list`
 >
-> Status: Stage 1 baseline draft.
+> Status: SPECIFIED — W20.
 
 `core.list` defines the growable owned sequence type used for variable-length
 ordered collections.

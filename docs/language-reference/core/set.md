@@ -2,7 +2,7 @@
 
 > Public module: `core.set`
 >
-> Status: Stage 1 baseline draft.
+> Status: SPECIFIED — W20.
 
 `core.set` defines the standard unique-value collection for Fuse.
 

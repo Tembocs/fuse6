@@ -2,7 +2,7 @@
 
 > Public module: `full.crypto`
 >
-> Status: Stage 1 baseline draft.
+> Status: SPECIFIED — W22.
 
 `full.crypto` defines the baseline cryptographic surface that Fuse chooses to
 ship as standard library rather than as an external package.

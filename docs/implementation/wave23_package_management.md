@@ -108,7 +108,7 @@ go test ./tests/e2e/... -run TestTwoCrateProject -v
   DoD: registry index is a deterministic, line-oriented file listing
   every published (name, version, url, sha256, dependencies) tuple.
   Specified in [../registry-protocol.md](../registry-protocol.md).
-  Verify: `test -f docs/registry-protocol.md && go test ./compiler/pkg/... -run TestRegistryIndexParse -v`
+  Verify: `go test ./compiler/pkg/... -run TestRegistryIndexParse -v`
 - Task 02: Package metadata schema [W23-P04-T02-METADATA]
   DoD: metadata returned for a given (name, version) is JSON with a
   frozen schema; schema version is explicit in the payload.
@@ -144,4 +144,4 @@ go test ./tests/e2e/... -run TestTwoCrateProject -v
 - Task 01: Retire package-manager stubs [W23-PCL-T01-RETIRE]
   Verify: `go run tools/checkstubs/main.go -wave W23`
 - Task 02: WC023 entry [W23-PCL-T02-CLOSURE-LOG]
-  Verify: `grep "WC023" docs/learning-log.md`
+  Verify: `go run tools/checkgov/main.go -wc-entry WC023`

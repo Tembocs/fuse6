@@ -2,7 +2,7 @@
 
 > Public module: `full.argparse`
 >
-> Status: Stage 1 baseline draft.
+> Status: SPECIFIED — W22.
 
 `full.argparse` defines command-line parsing, flags, positional arguments,
 subcommands, and help/usage generation.

@@ -2,7 +2,7 @@
 
 > Public module: `full.time`
 >
-> Status: Stage 1 baseline draft.
+> Status: SPECIFIED — W22.
 
 `full.time` defines wall-clock, monotonic time, durations, and sleep helpers.
 

@@ -2,7 +2,7 @@
 
 > Public module: `core.uint32`
 >
-> Status: Stage 1 baseline draft.
+> Status: SPECIFIED — W20.
 
 `core.uint32` defines the width-specific guide for `U32` constants, parsing,
 formatting, and conversion helpers.

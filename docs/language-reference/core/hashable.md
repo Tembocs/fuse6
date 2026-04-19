@@ -2,7 +2,7 @@
 
 > Public module: `core.hashable`
 >
-> Status: Stage 1 baseline draft.
+> Status: SPECIFIED — W20.
 
 `core.hashable` documents the trait contract for values that may be hashed and
 stored in hash-based containers.

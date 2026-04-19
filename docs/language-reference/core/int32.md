@@ -2,7 +2,7 @@
 
 > Public module: `core.int32`
 >
-> Status: Stage 1 baseline draft.
+> Status: SPECIFIED — W20.
 
 `core.int32` is the width-specific guide for `I32` parsing, formatting, bounds,
 and arithmetic helpers that are specific to 32-bit signed integers.

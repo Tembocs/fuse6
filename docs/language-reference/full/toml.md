@@ -2,7 +2,7 @@
 
 > Public module: `full.toml`
 >
-> Status: Stage 1 baseline draft.
+> Status: SPECIFIED — W22.
 
 `full.toml` defines TOML parse/emit support for configuration-oriented data.
 

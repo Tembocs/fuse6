@@ -237,5 +237,5 @@ go test ./tests/e2e/... -run TestCheckerBasicProof -v
 - Task 01: Retire check stubs [W06-PCL-T01-RETIRE]
   Verify: `go run tools/checkstubs/main.go -wave W06`
 - Task 02: WC006 entry [W06-PCL-T02-CLOSURE-LOG]
-  Verify: `grep "WC006" docs/learning-log.md`
+  Verify: `go run tools/checkgov/main.go -wc-entry WC006`
 

@@ -348,5 +348,5 @@ fuse doc --check stdlib/core/
   and what W21 must know.
   DoD: `docs/learning-log.md` contains a complete `WC020` entry aligned with
   this wave's proof commands.
-  Verify: `grep "WC020" docs/learning-log.md`
+  Verify: `go run tools/checkgov/main.go -wc-entry WC020`
 

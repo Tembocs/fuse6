@@ -2,7 +2,7 @@
 
 > Public module: `full.process`
 >
-> Status: Stage 1 baseline draft.
+> Status: SPECIFIED — W22.
 
 `full.process` defines child-process spawning, waiting, exit-status inspection,
 and standard-stream redirection.

@@ -250,8 +250,8 @@ criteria say:
   sentence. Real waves always surface friction.
 - Proof programs exist but only exercise integer arithmetic or single-arm
   `match`. The feature under test is never adversarially pressed.
-- Unit tests in the wave's packages are all green, but running
-  `bin/fuse build tests/e2e/<proof>.fuse && ./<binary>` is not part of CI.
+- Unit tests in the wave's packages are all green, but the project-owned
+      proof-program runner is not part of CI for the feature being signed off.
 - Stubs were struck from the Active table without appearing in the Stub
   history's Retired list with a proof program reference.
 - The closure commit and the implementation commits are the same commit.

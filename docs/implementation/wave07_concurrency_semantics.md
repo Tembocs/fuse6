@@ -104,5 +104,5 @@ go test ./tests/e2e/... -run TestConcurrencyRejections -v
   remains stubbed with diagnostics, retiring W16.
   Verify: `go run tools/checkstubs/main.go -wave W07`
 - Task 02: WC007 entry [W07-PCL-T02-CLOSURE-LOG]
-  Verify: `grep "WC007" docs/learning-log.md`
+  Verify: `go run tools/checkgov/main.go -wc-entry WC007`
 

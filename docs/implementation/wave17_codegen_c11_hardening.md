@@ -66,7 +66,7 @@ go test ./compiler/codegen/... -run TestOverflowPolicy -v
 go test ./compiler/codegen/... -run TestDebugInfoEmission -v
 go test ./tests/e2e/... -run TestDebugBreakpointInGdb -v
 go test ./tests/perf/... -run TestPerfBaseline -v
-make repro
+go run tools/checkartifacts/main.go -repro-codegen
 ```
 
 ## Phase 00: Stub Audit [W17-P00-STUB-AUDIT]
@@ -160,7 +160,7 @@ make repro
 - Task 01: L001–L015 regression coverage [W17-P11-T01-REGRESSIONS]
   Verify: `go test ./compiler/codegen/... -run TestHistoricalRegressions -v`
 - Task 02: Reproducibility [W17-P11-T02-REPRO]
-  Verify: `make repro`
+  Verify: `go run tools/checkartifacts/main.go -repro-codegen`
 
 ## Phase 12: Debug Info Through C Backend [W17-P12-DEBUG-INFO]
 
@@ -221,5 +221,5 @@ first honest measurement.
 - Task 01: Retire codegen stubs [W17-PCL-T01-RETIRE]
   Verify: `go run tools/checkstubs/main.go -wave W17`
 - Task 02: WC017 entry [W17-PCL-T02-CLOSURE-LOG]
-  Verify: `grep "WC017" docs/learning-log.md`
+  Verify: `go run tools/checkgov/main.go -wc-entry WC017`
 

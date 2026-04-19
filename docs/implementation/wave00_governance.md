@@ -10,12 +10,14 @@ language feature.
 
 Entry criterion: none.
 
-State on entry: only the foundational docs and the `STUBS.md` seed
-exist. No Go module. No CI. No compiler packages.
+State on entry: only the foundational docs exist. The repository may already
+contain pre-bootstrap coordination artifacts (`STUBS.md`,
+`.claude/current-wave.json`) in seed form, but there is no Go module, no CI,
+and no compiler packages.
 
 Exit criteria:
 
-- `make all` succeeds from a clean checkout
+- the project-owned build roundtrip succeeds from a clean checkout
 - `go test ./...` succeeds on the initial package set
 - CI runs on every push and PR for Linux, macOS, and Windows
 - the foundational docs exist and are readable
@@ -27,18 +29,26 @@ Exit criteria:
 Proof of completion:
 
 ```
-make all
+go run tools/checkartifacts/main.go -build-roundtrip
 go test ./...
 go run tools/checkstubs/main.go
+go run tools/checkgov/main.go -current-wave
 ```
 
 ## Phase 00: Stub Audit [W00-P00-STUB-AUDIT]
 
-- Task 01: Initialize STUBS.md with seed stubs [W00-P00-T01-INIT-STUBS]
-  Currently: file does not exist.
-  DoD: STUBS.md exists with the Active stubs table seeded with every
-  language feature scheduled for a wave greater than W00, each with its
-  scheduled retiring wave. Stub history section is empty.
+- Task 01: Install bootstrap `tools/checkstubs` validator
+  [W00-P00-T01-CHECKSTUBS-BOOTSTRAP]
+  Currently: stub-audit verification cannot rely on a tool that does not yet
+  exist.
+  DoD: a minimal `tools/checkstubs` validator exists and can verify the
+  pre-bootstrap seed state as well as the first code-backed STUBS inventory.
+  Verify: `go test ./tools/checkstubs/... -v`
+- Task 02: Initialize or refresh STUBS.md seed state [W00-P00-T02-INIT-STUBS]
+  Currently: the repository may contain only the pre-bootstrap seed state.
+  DoD: STUBS.md exists. If the repository is still docs-only, it says so
+  explicitly. Once the Wave 00 package skeleton exists, the Active stubs table
+  is refreshed to the first code-backed inventory before W00 closes.
   Verify: `go run tools/checkstubs/main.go -audit-seed`
 
 ## Phase 01: Repository Initialization [W00-P01-REPO-INIT]
@@ -62,7 +72,7 @@ go run tools/checkstubs/main.go
 ## Phase 03: Build and CI Baseline [W00-P03-BUILD-CI]
 
 - Task 01: Author Makefile targets [W00-P03-T01-MAKEFILE]
-  Verify: `make all && make test && make clean && make all`
+  Verify: `go run tools/checkartifacts/main.go -build-roundtrip`
 - Task 02: Add CI matrix [W00-P03-T02-CI-MATRIX]
   Verify: `go run tools/checkci/main.go`
 - Task 03: Add golden harness [W00-P03-T03-GOLDEN-HARNESS]
@@ -70,18 +80,16 @@ go run tools/checkstubs/main.go
 
 ## Phase 04: Governance Artifacts [W00-P04-GOVERNANCE]
 
-- Task 01: Create `.claude/current-wave.json`
+- Task 01: Initialize `.claude/current-wave.json`
   [W00-P04-T01-CURRENT-WAVE-FILE]
   Verify: `go run tools/checkgov/main.go -current-wave`
 - Task 02: Document phase model [W00-P04-T02-PHASE-MODEL-DOC]
-  Verify: `test -f docs/implementation/phase-model.md && go run tools/checkdocs/main.go`
-- Task 03: Install `tools/checkstubs` [W00-P04-T03-CHECKSTUBS-TOOL]
-  Verify: `go test ./tools/checkstubs/... -v`
+  Verify: `go run tools/checkdocs/main.go -phase-model`
 
 ## Wave Closure Phase [W00-PCL-WAVE-CLOSURE]
 
 - Task 01: Update STUBS.md stub history [W00-PCL-T01-HISTORY]
   Verify: `go run tools/checkstubs/main.go -history-current-wave W00`
 - Task 02: Write WC000 learning-log entry [W00-PCL-T02-CLOSURE-LOG]
-  Verify: `grep "WC000" docs/learning-log.md`
+  Verify: `go run tools/checkgov/main.go -wc-entry WC000`
 

@@ -2,7 +2,7 @@
 
 > Public module: `full.sync`
 >
-> Status: Stage 1 baseline draft.
+> Status: SPECIFIED — W22.
 
 `full.sync` defines mutexes, reader/writer locks, condition variables, and
 once-only initialization.

@@ -25,8 +25,8 @@ Exit criteria:
 Proof of completion:
 
 ```
-make runtime
-cd runtime && make test
+go run tools/checkruntime/main.go -build
+go run tools/checkruntime/main.go -suite all
 go test ./compiler/codegen/... -run TestSpawnEmission -v
 go test ./compiler/codegen/... -run TestChannelOpsEmission -v
 go test ./compiler/codegen/... -run TestJoinEmission -v
@@ -44,21 +44,21 @@ go test ./tests/e2e/... -run TestChannelRoundTrip -v
 - Task 01: Runtime header [W16-P01-T01-HEADER]
   Verify: `go run tools/checkruntime/main.go -header-syntax`
 - Task 02: Memory and panic impl [W16-P01-T02-MEM-PANIC]
-  Verify: `cd runtime && make test`
+  Verify: `go run tools/checkruntime/main.go -suite mem-panic`
 
 ## Phase 02: IO, Process, Time [W16-P02-IO-PROC-TIME]
 
 - Task 01: IO [W16-P02-T01-IO]
-  Verify: `cd runtime && ./tests/test_io`
+  Verify: `go run tools/checkruntime/main.go -suite io`
 - Task 02: Process and time [W16-P02-T02-PROC-TIME]
-  Verify: `cd runtime && ./tests/test_process`
+  Verify: `go run tools/checkruntime/main.go -suite process-time`
 
 ## Phase 03: Threads and Sync [W16-P03-THREAD-SYNC]
 
 - Task 01: Thread spawn and TLS [W16-P03-T01-SPAWN]
-  Verify: `cd runtime && ./tests/test_thread`
+  Verify: `go run tools/checkruntime/main.go -suite thread`
 - Task 02: Sync primitives [W16-P03-T02-SYNC]
-  Verify: `cd runtime && ./tests/test_sync`
+  Verify: `go run tools/checkruntime/main.go -suite sync`
 
 ## Phase 04: Compiler-Runtime Bridging [W16-P04-BRIDGE]
 
@@ -81,5 +81,5 @@ go test ./tests/e2e/... -run TestChannelRoundTrip -v
 - Task 01: Retire runtime stubs [W16-PCL-T01-RETIRE]
   Verify: `go run tools/checkstubs/main.go -wave W16`
 - Task 02: WC016 entry [W16-PCL-T02-CLOSURE-LOG]
-  Verify: `grep "WC016" docs/learning-log.md`
+  Verify: `go run tools/checkgov/main.go -wc-entry WC016`
 

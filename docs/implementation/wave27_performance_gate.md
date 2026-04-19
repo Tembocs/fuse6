@@ -128,4 +128,4 @@ go run tools/perfreport/main.go -verify-dashboard
   DoD: WC027 records the final perf ratios against each reference
   implementation, the compile-time budgets that passed, and any
   benchmarks that required threshold adjustments (with justification).
-  Verify: `grep "WC027" docs/learning-log.md`
+  Verify: `go run tools/checkgov/main.go -wc-entry WC027`

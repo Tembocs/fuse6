@@ -89,5 +89,5 @@ go test ./tests/e2e/... -run TestClosureCaptureRuns -v
 - Task 01: Retire closure stubs [W12-PCL-T01-RETIRE]
   Verify: `go run tools/checkstubs/main.go -wave W12`
 - Task 02: WC012 entry [W12-PCL-T02-CLOSURE-LOG]
-  Verify: `grep "WC012" docs/learning-log.md`
+  Verify: `go run tools/checkgov/main.go -wc-entry WC012`
 

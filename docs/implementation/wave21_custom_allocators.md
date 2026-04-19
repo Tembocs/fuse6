@@ -175,5 +175,5 @@ go test ./tests/e2e/... -run TestBumpAllocatorProof -v
   retired stubs, and constraints W22 must preserve.
   DoD: `docs/learning-log.md` contains a complete `WC021` entry aligned with
   this wave's proof commands.
-  Verify: `grep "WC021" docs/learning-log.md`
+  Verify: `go run tools/checkgov/main.go -wc-entry WC021`
 

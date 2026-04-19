@@ -51,5 +51,5 @@ go test ./tests/e2e/... -run TestErrorPropagation -v
 - Task 01: Retire `?` stubs [W11-PCL-T01-RETIRE]
   Verify: `go run tools/checkstubs/main.go -wave W11`
 - Task 02: WC011 entry [W11-PCL-T02-CLOSURE-LOG]
-  Verify: `grep "WC011" docs/learning-log.md`
+  Verify: `go run tools/checkgov/main.go -wc-entry WC011`
 

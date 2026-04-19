@@ -2,7 +2,7 @@
 
 > Public module: `core.traits`
 >
-> Status: Stage 1 baseline draft.
+> Status: SPECIFIED — W20.
 
 `core.traits` is the canonical import surface for the common traits users are
 expected to reach for directly.

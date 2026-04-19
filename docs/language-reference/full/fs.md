@@ -2,7 +2,7 @@
 
 > Public module: `full.fs`
 >
-> Status: Stage 1 baseline draft.
+> Status: SPECIFIED — W22.
 
 `full.fs` defines files, directories, metadata, traversal helpers, and file
 system mutation operations.

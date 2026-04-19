@@ -2,7 +2,7 @@
 
 > Public module: `full.test`
 >
-> Status: Stage 1 baseline draft.
+> Status: SPECIFIED — W22.
 
 `full.test` defines the standard testing helpers exposed to Fuse code, such as
 assertions, expected-failure helpers, and fixture or golden utilities.

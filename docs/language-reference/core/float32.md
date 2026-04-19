@@ -2,7 +2,7 @@
 
 > Public module: `core.float32`
 >
-> Status: Stage 1 baseline draft.
+> Status: SPECIFIED — W20.
 
 `core.float32` is the width-specific guide for `F32` parsing, classification,
 rounding, and constants.

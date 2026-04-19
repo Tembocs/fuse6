@@ -2,7 +2,7 @@
 
 > Public module: `full.regex`
 >
-> Status: Stage 1 baseline draft.
+> Status: SPECIFIED — W22.
 
 `full.regex` defines regex compilation, matching, captures, and replacement
 helpers.

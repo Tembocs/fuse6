@@ -2,7 +2,7 @@
 
 > Public module: `full.json_schema`
 >
-> Status: Stage 1 baseline draft.
+> Status: SPECIFIED — W22.
 
 `full.json_schema` defines JSON Schema representation and validation over
 `full.json` values.

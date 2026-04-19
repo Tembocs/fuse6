@@ -2,7 +2,7 @@
 
 > Public module: `core.hash`
 >
-> Status: Stage 1 baseline draft.
+> Status: SPECIFIED — W20.
 
 `core.hash` covers hasher state, hash combination, and helper APIs used by
 `core.map`, `core.set`, and user-defined keyed types.

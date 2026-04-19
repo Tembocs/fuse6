@@ -34,7 +34,7 @@ Fuse is compiled ahead of time to native code. The language includes:
 - channels and shared synchronization primitives for concurrency
 - a small explicit unsafe boundary for FFI and raw pointer work
 
-The current compiler architecture uses a bootstrap path in which a Go compiler
+The planned compiler architecture uses a bootstrap path in which a Go compiler
 lowers Fuse through C11 before producing native binaries. The long-term goal is
 a self-hosted Fuse compiler that no longer depends on that bootstrap backend.
 
@@ -45,6 +45,11 @@ because planning, proof, and implementation drifted apart. This repository is
 structured to keep the language reference, the rules, the implementation plan,
 the learning log, `STUBS.md`, and the end-to-end proof corpus aligned so that
 the same failure mode does not recur quietly.
+
+This repository is still in the pre-bootstrap planning state ahead of Wave 00
+execution. The governance artifacts are present so planning can be audited,
+but the compiler, runtime, stdlib, and proof trees have not been implemented
+yet.
 
 That discipline also applies to Stage 1 scope. A Stage 1 compiler is not
 considered complete if it only ships core types plus thin systems-facing
@@ -72,6 +77,7 @@ There are three additional normative artifacts outside the core docs list:
 |---|---|
 | `docs/registry-protocol.md` | Frozen Wave 23 package-registry wire contract |
 | `STUBS.md` | Live registry of every compiler stub, its diagnostic, and the wave that retires it |
+| `.claude/current-wave.json` | Active wave/phase coordination file used during wave execution and closure |
 | `tests/e2e/README.md` | Registry of every end-to-end proof program and its expected output |
 
 Reference companion documents used during delivery and sign-off:
@@ -94,9 +100,10 @@ If you are approaching the project for the first time:
 3. Read `docs/language-reference/fuse-language-reference.md`.
 4. Read `docs/repository-layout.md`.
 5. Check `STUBS.md`.
-6. Read `docs/learning-log.md` for the project's accumulated lessons.
-7. If you are working on package acquisition, read `docs/registry-protocol.md`.
-8. If you are auditing wave completion, read `docs/audit.md`.
+6. Check `.claude/current-wave.json`.
+7. Read `docs/learning-log.md` for the project's accumulated lessons.
+8. If you are working on package acquisition, read `docs/registry-protocol.md`.
+9. If you are auditing wave completion, read `docs/audit.md`.
 
 ## Status
 

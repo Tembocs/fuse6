@@ -49,7 +49,7 @@ go test ./tests/e2e/... -run TestNativeDebugBreakpoint -v
 - Task 01: All e2e proofs through native [W26-P02-T01-ALL-PROOFS]
   Verify: `go test ./tests/e2e/... -run TestNativeBackendAllProofs -v`
 - Task 02: stage2 through native [W26-P02-T02-STAGE2-NATIVE]
-  Verify: `fuse build --backend=native stage2/src/... && stage2_out/fusec2_native --version`
+  Verify: `go run tools/checkartifacts/main.go -native-stage2`
 
 ## Phase 03: DWARF Debug Info [W26-P03-DWARF]
 
@@ -75,5 +75,5 @@ go test ./tests/e2e/... -run TestNativeDebugBreakpoint -v
 - Task 01: Stub history closure [W26-PCL-T01-HISTORY]
   Verify: `go run tools/checkstubs/main.go -wave W26`
 - Task 02: WC026 entry [W26-PCL-T02-CLOSURE-LOG]
-  Verify: `grep "WC026" docs/learning-log.md`
+  Verify: `go run tools/checkgov/main.go -wc-entry WC026`
 

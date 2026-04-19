@@ -2,7 +2,7 @@
 
 > Public module: `full.yaml`
 >
-> Status: Stage 1 baseline draft.
+> Status: SPECIFIED — W22.
 
 `full.yaml` defines YAML parse/emit support and a document model suitable for
 configuration and data interchange.

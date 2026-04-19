@@ -2,7 +2,7 @@
 
 > Public module: `full.http_server`
 >
-> Status: Stage 1 baseline draft.
+> Status: SPECIFIED — W22.
 
 `full.http_server` defines the baseline blocking server surface on top of
 `full.net` and `full.http`.

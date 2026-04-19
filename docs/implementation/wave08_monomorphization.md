@@ -87,5 +87,5 @@ go test ./tests/e2e/... -run TestMultipleInstantiations -v
 - Task 01: Retire generics stubs [W08-PCL-T01-RETIRE]
   Verify: `go run tools/checkstubs/main.go -wave W08`
 - Task 02: WC008 entry [W08-PCL-T02-CLOSURE-LOG]
-  Verify: `grep "WC008" docs/learning-log.md`
+  Verify: `go run tools/checkgov/main.go -wc-entry WC008`
 

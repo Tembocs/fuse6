@@ -1812,8 +1812,8 @@ Parallel iteration over a borrowed slice — the scoped-threads pattern —
 cannot be expressed with `spawn` alone in v1, because `spawn` detaches
 the thread from the caller's scope. v1 parallelism works by transferring
 ownership into threads (see the rewritten example in §39). A scoped
-`thread::scope` primitive, which would allow `ref`-capture with a
-guaranteed join-before-return, is a non-normative post-v1 extension.
+`thread::scope` primitive is intentionally out of scope for Fuse v1; it is
+mentioned here only to explain why `spawn` is restricted to escaping closures.
 
 ### 15.7 Implementation contracts
 
@@ -2297,7 +2297,7 @@ let d: Meters = distance(1.0, 4.0);
 
 ## 21. Iterators
 
-> Implementation status: SPECIFIED — W19 (core stdlib; depends on associated
+> Implementation status: SPECIFIED — W20 (core stdlib; depends on associated
 > types, §30)
 
 ### 21.1 `for` / `in` desugars to the iterator protocol
@@ -2434,7 +2434,8 @@ safety invariants.
 
 ## 23. Unsafe
 
-> Implementation status: SPECIFIED — W17 (backend), W19 (stdlib bridge files)
+> Implementation status: SPECIFIED — W17 (backend), W20 (core stdlib bridge
+> files), W22 (hosted stdlib bridge files)
 
 ### 23.1 Unsafe blocks
 
@@ -3040,7 +3041,7 @@ produces undefined behavior.
 ## 34. Memory Intrinsics
 
 > Implementation status: SPECIFIED — W14 (const-eval context), W17 (codegen
-> emission), W19 (stdlib surface)
+> emission), W20 (stdlib surface)
 
 > **Importance:** critical for a systems language. `size_of` and `align_of`
 > are required for every custom allocator, every FFI struct, every arena, and
@@ -3101,7 +3102,7 @@ dynamically sized referents, it returns the actual storage size.
 
 ## 35. Null Pointers
 
-> Implementation status: SPECIFIED — W17 (lowering), W19 (stdlib surface)
+> Implementation status: SPECIFIED — W17 (lowering), W20 (stdlib surface)
 
 > **Importance:** high. Null pointers appear constantly in C APIs, OS
 > interfaces, and optional return values from FFI. Without a way to express,
@@ -3563,7 +3564,7 @@ must produce a diagnostic rather than silently fall back.
 
 ## 42. Strings and Raw Bytes
 
-> Implementation status: SPECIFIED — W19 (core stdlib)
+> Implementation status: SPECIFIED — W20 (core stdlib)
 
 > **Importance:** high. Every system that reads files, handles network data,
 > or interfaces with C needs to move between text and raw byte representations.
@@ -3655,7 +3656,7 @@ undefined behavior for downstream operations that assume UTF-8.
 
 ## 43. Formatting and Output
 
-> Implementation status: SPECIFIED — W19 (core stdlib)
+> Implementation status: SPECIFIED — W20 (core stdlib)
 
 > **Importance:** medium-high. Every program needs output. Without a
 > formatting system, printing anything beyond raw bytes requires manual string
@@ -4279,7 +4280,7 @@ must emit a diagnostic.
 
 ## 51. Interior Mutability
 
-> Implementation status: SPECIFIED — W19 (core stdlib)
+> Implementation status: SPECIFIED — W20 (core stdlib)
 
 > **Importance:** significant limitation without it. Interior mutability is
 > needed for caches, lazy initialization, reference-counted values, and any
@@ -4841,7 +4842,8 @@ across builds.
 
 ## 58. Standard Library Baseline
 
-> Implementation status: SPECIFIED — Stage 1 baseline
+> Implementation status: SPECIFIED — W20 (core baseline), W21
+> (allocatorization), W22 (hosted baseline), W23 (package acquisition)
 
 ### 58.1 Stdlib is part of the language contract
 
@@ -4889,7 +4891,7 @@ At minimum, a completed baseline stdlib feature should have:
 
 ## 59. Standard Library Guide Index
 
-> Implementation status: guide index for the split stdlib references
+> Status: guide index for the split stdlib references
 
 ### 59.1 Core guide index
 
@@ -5150,7 +5152,7 @@ unary_op        = "!" | "-" | "*" | "&" ;
 postfix_expr    = primary_expr { postfix_op } ;
 postfix_op      = "." IDENT
                 | "?." IDENT
-                | "?" 
+                | "?"
                 | "(" [ arg_list ] ")"
                 | "[" expr "]"
                 | "[" expr ".." [ expr ] "]"

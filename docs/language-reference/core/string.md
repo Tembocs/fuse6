@@ -2,7 +2,7 @@
 
 > Public module: `core.string`
 >
-> Status: Stage 1 baseline draft.
+> Status: SPECIFIED — W20.
 
 `core.string` owns the `String` type, UTF-8 construction, byte views, text
 manipulation, and string parsing helpers.

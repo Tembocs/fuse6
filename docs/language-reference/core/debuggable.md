@@ -2,7 +2,7 @@
 
 > Public module: `core.debuggable`
 >
-> Status: Stage 1 baseline draft.
+> Status: SPECIFIED — W20.
 
 `core.debuggable` documents the trait surface for debug-oriented formatting and
 inspection.

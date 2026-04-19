@@ -2,7 +2,7 @@
 
 > Public module: `core.int8`
 >
-> Status: Stage 1 baseline draft.
+> Status: SPECIFIED — W20.
 
 `core.int8` defines the guide surface for `I8` constants, parsing, formatting,
 and width-specific helpers.

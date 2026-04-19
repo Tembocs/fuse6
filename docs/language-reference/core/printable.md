@@ -2,7 +2,7 @@
 
 > Public module: `core.printable`
 >
-> Status: Stage 1 baseline draft.
+> Status: SPECIFIED — W20.
 
 `core.printable` documents the trait or re-export surface used by the simple
 printing APIs for user-facing output.

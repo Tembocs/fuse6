@@ -2,7 +2,7 @@
 
 > Public module: `core.option`
 >
-> Status: Stage 1 baseline draft.
+> Status: SPECIFIED — W20.
 
 `core.option` defines `Option[T]`, its constructors, combinators, and the
 library-facing optional-value contract.

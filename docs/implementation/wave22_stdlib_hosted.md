@@ -422,5 +422,5 @@ fuse doc --check stdlib/full/
   stubs, and any residual constraints carried into W23.
   DoD: `docs/learning-log.md` contains a complete `WC022` entry aligned with
   this wave's proof commands.
-  Verify: `grep "WC022" docs/learning-log.md`
+  Verify: `go run tools/checkgov/main.go -wc-entry WC022`
 

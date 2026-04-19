@@ -2,7 +2,7 @@
 
 > Public module: `core.equatable`
 >
-> Status: Stage 1 baseline draft.
+> Status: SPECIFIED — W20.
 
 `core.equatable` defines the equality trait surface and the contracts consumed
 by maps, sets, and user-defined value types.

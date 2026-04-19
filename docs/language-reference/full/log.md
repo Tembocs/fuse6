@@ -2,7 +2,7 @@
 
 > Public module: `full.log`
 >
-> Status: Stage 1 baseline draft.
+> Status: SPECIFIED — W22.
 
 `full.log` defines leveled or structured logging, formatter integration, and
 pluggable sinks.

@@ -19,7 +19,7 @@ Exit criteria:
 - spine MIR, codegen, runtime, driver packages alive with minimal impls
 - every feature beyond int-returning main either emits a diagnostic or is
   in STUBS.md with a retiring wave
-- `tests/e2e/README.md` created with the two proof programs recorded
+- `tests/e2e/README.md` records the two proof programs committed in this wave
 
 Proof of completion:
 
@@ -76,5 +76,5 @@ go run tools/checkstubs/main.go -wave W05
 - Task 01: Update STUBS.md stub history [W05-PCL-T01-HISTORY]
   Verify: `go run tools/checkstubs/main.go -wave W05`
 - Task 02: WC005 entry [W05-PCL-T02-CLOSURE-LOG]
-  Verify: `grep "WC005" docs/learning-log.md`
+  Verify: `go run tools/checkgov/main.go -wc-entry WC005`
 

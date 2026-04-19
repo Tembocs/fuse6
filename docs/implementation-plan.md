@@ -127,6 +127,10 @@ rather than leaving modules implied by broad labels.
 
 The plan uses globally unique identifiers.
 
+- Use `Stage 1` and `Stage 2` in prose.
+- Reserve `stage1` and `stage2` for paths, artifact names, and other
+  machine-facing identifiers such as `stage2/` or `stage2_out/`.
+
 - Wave headings:
   `Wave 06: Type Checking`
 - Phase headings:

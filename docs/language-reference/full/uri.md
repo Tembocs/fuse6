@@ -2,7 +2,7 @@
 
 > Public module: `full.uri`
 >
-> Status: Stage 1 baseline draft.
+> Status: SPECIFIED — W22.
 
 `full.uri` defines URI parsing, normalization, component access, and
 percent-encoding helpers.

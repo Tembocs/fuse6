@@ -480,8 +480,9 @@ separation so that:
 
 The minimum commit sequence per wave is:
 
-1. **P00 commit** — updates `.claude/current-wave.json` to `{wave: Wxx,
-   phase: P00}`, refreshes any stale `STUBS.md` Active-row descriptions,
+1. **P00 commit** — updates `.claude/current-wave.json` to
+   `{current_wave: Wxx, current_phase: P00, updated: YYYY-MM-DD}`,
+   refreshes any stale `STUBS.md` Active-row descriptions,
    and records the output of `go run tools/checkstubs/main.go -wave Wxx
    -phase P00`. Touches no compiler source.
 2. **Implementation commit(s)** — one or more commits carrying the
@@ -492,7 +493,8 @@ The minimum commit sequence per wave is:
 3. **PCL commit** — removes the retired row from the `STUBS.md` Active
    table, appends the wave's Stub-history block, appends the `WCxxx`
    entry to `docs/learning-log.md`, and bumps
-   `.claude/current-wave.json` to `{phase: PCL}`.
+   `.claude/current-wave.json` to
+   `{current_wave: Wxx, current_phase: PCL, updated: YYYY-MM-DD}`.
 
 Waves `W00`–`W06` pre-date this rule and were landed as single combined
 commits; the retrospective record is in `L020`. Rule 9.5 applies to `W07`

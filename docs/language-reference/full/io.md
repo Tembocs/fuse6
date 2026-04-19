@@ -2,7 +2,7 @@
 
 > Public module: `full.io`
 >
-> Status: Stage 1 baseline draft.
+> Status: SPECIFIED — W22.
 
 `full.io` defines reader/writer traits, standard streams, and common text/byte
 I/O operations.

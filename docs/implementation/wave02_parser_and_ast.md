@@ -83,5 +83,5 @@ go test ./compiler/parse/... -run TestNopanicOnMalformed -v
 - Task 01: Retire parse/ast stubs [W02-PCL-T01-RETIRE-STUB]
   Verify: `go run tools/checkstubs/main.go -wave W02 -retired parse,ast`
 - Task 02: WC002 entry [W02-PCL-T02-CLOSURE-LOG]
-  Verify: `grep "WC002" docs/learning-log.md`
+  Verify: `go run tools/checkgov/main.go -wc-entry WC002`
 

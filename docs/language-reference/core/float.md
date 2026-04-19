@@ -2,7 +2,7 @@
 
 > Public module: `core.float`
 >
-> Status: Stage 1 baseline draft.
+> Status: SPECIFIED — W20.
 
 `core.float` documents the default floating-point helper surface, including
 parsing, formatting, rounding, and classification.

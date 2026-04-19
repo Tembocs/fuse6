@@ -85,5 +85,5 @@ go test ./tests/e2e/... -run TestDynDispatchProof -v
 - Task 01: Retire `dyn Trait` stubs [W13-PCL-T01-RETIRE]
   Verify: `go run tools/checkstubs/main.go -wave W13`
 - Task 02: WC013 entry [W13-PCL-T02-CLOSURE-LOG]
-  Verify: `grep "WC013" docs/learning-log.md`
+  Verify: `go run tools/checkgov/main.go -wc-entry WC013`
 

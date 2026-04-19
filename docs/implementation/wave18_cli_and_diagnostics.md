@@ -196,5 +196,5 @@ and reuses them when upstream inputs have not changed. This is what turns
 - Task 01: Retire CLI stubs [W18-PCL-T01-RETIRE]
   Verify: `go run tools/checkstubs/main.go -wave W18`
 - Task 02: WC018 entry [W18-PCL-T02-CLOSURE-LOG]
-  Verify: `grep "WC018" docs/learning-log.md`
+  Verify: `go run tools/checkgov/main.go -wc-entry WC018`
 

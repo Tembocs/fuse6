@@ -2,7 +2,7 @@
 
 > Public module: `full.simd`
 >
-> Status: Stage 1 baseline draft.
+> Status: SPECIFIED — W22.
 
 `full.simd` defines target-gated vector types and operations where the project
 chooses to expose them as part of the hosted baseline.

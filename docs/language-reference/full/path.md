@@ -2,7 +2,7 @@
 
 > Public module: `full.path`
 >
-> Status: Stage 1 baseline draft.
+> Status: SPECIFIED — W22.
 
 `full.path` documents path construction, splitting, normalization, and
 platform-aware separator behavior.

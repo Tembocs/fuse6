@@ -186,4 +186,4 @@ go test ./tests/e2e/... -run TestLspScriptedSession -v
 - Task 01: Retire LSP stubs [W19-PCL-T01-RETIRE]
   Verify: `go run tools/checkstubs/main.go -wave W19`
 - Task 02: WC019 entry [W19-PCL-T02-CLOSURE-LOG]
-  Verify: `grep "WC019" docs/learning-log.md`
+  Verify: `go run tools/checkgov/main.go -wc-entry WC019`
